@@ -1,3 +1,5 @@
+#Learning Linked List 
+#Source - https://www.youtube.com/watch?v=JlMyYuY1aXU&t=666s
 class node:
   def __init__(self,data=None):
     self.data=data
