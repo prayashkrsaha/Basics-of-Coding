@@ -31,14 +31,45 @@ class linked_list:
       
     print(elems)
 
+  def get(self,index):
+    if index>self.length() or index<0:
+      print('ERROR: "GET" Index out of range')
+      return None
+
+    cur_idx=0
+    cur_node=self.head
+    while True:
+      cur_node=cur_node.next
+      if cur_idx==index: return cur_node.data
+      cur_idx+=1
+
+  def erase(self,index):
+      if index>self.length() or index<0:
+        print('ERROR: "GET" Index out of range')
+        return None
+      
+      cur_idx=0
+      cur_node=self.head
+      while True:
+        last_node=cur_node
+        cur_node=cur_node.next
+        if cur_idx==index:
+          last_node.next=cur_node.next
+          return
+        cur_idx+=1
+      
 
 
 
-
+    
 
 my_list=linked_list()
 
 my_list.append(1)
 my_list.append(2)
 my_list.append(3)
+my_list.append(4)
+my_list.display()
+print('The element at the 2nd index is: {}'.format(my_list.get(2)))
+my_list.erase(2)
 my_list.display()
