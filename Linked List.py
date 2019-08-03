@@ -1,6 +1,8 @@
 #Learning Linked List 
 # The benefits of linked list is that it solves the memoery allocation issue in a array. In an array the elements has to be in the nearby 
 # memory location. In linked list it need not be like that.
+#Downnside is that you cannot randomly access elements in linear time. We will have to go through all the elments
+
 #Source - https://www.youtube.com/watch?v=JlMyYuY1aXU&t=666s
 class node:
   def __init__(self,data=None):
